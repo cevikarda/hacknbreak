@@ -20,13 +20,13 @@ public class UIController : MonoBehaviour
 
     public void OnScoreUpdated(int score)
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = score.ToString();
         gameOverPanelScoreText.text = "Score" + Environment.NewLine + score;
     }
 
     public void OnHighScoreUpdated(int highScore)
     {
-        highScoreText.text = "High: " + highScore;
+        highScoreText.text = highScore.ToString();
         gameOverPanelHighScoreText.text = "High Score" + Environment.NewLine + highScore;
     }
 

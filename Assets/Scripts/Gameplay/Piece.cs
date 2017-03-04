@@ -17,6 +17,8 @@ public class Piece : MonoBehaviour, IDragHandler, IEndDragHandler
     private PieceType pieceType;
     [SerializeField]
     private Direction block1Direction;
+    [SerializeField]
+    private Vector2 dragOffset;
 
     private Hand hand;
 
@@ -30,7 +32,7 @@ public class Piece : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.position = eventData.position;
+        rectTransform.position = eventData.position + dragOffset;
     }
 
     public void OnEndDrag(PointerEventData eventData)
